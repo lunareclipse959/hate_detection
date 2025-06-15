@@ -24,7 +24,7 @@
 
 核心思想： 在特定任务的标注数据集上，对一个预训练模型进行额外的训练，使其深度适应任务的数据分布和复杂输出逻辑。
 实现方式： 将任务视为一个文本到文本 (Text-to-Text) 的生成问题，利用编码器-解码器架构的模型进行端到端训练。
-所用模型： IDEA-CCNL/Randeng-T5-784M-Chinese。
+所用模型： IDEA-CCNL/Randeng-T5-784M-Chinese。可以连接到Hugging face官网或者本地下载后上传到服务器中使用。
 
 文件说明
 train.json: 训练数据集，用于模型微调。
@@ -35,6 +35,7 @@ API.py : 实现基于大模型API调用进行仇恨言论抽取的代码。
 result.txt: API 调用方式的输出结果文件，实时更新。
 
 运行环境
+本实验租用RTX4090服务器进行
 确保您已安装必要的Python库：
 pip install torch transformers accelerate datasets sentencepiece jsonlines openai websocket-client
 
